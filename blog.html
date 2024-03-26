@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <link rel="stylesheet" href="styles/style.css"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Psikolog Selin Ayas </title>
+
+  <link rel="icon" type="image/x-icon" href="/images/Psychology_Logo.jpeg">
+  
+  <!-- Google font add start -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+ 
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Water+Brush&display=swap" rel="stylesheet">
+  <!-- Google font add end -->
+
+
+
+</head>
+
+
+<body>
+  
+  <header class="header">
+       <div class="divhead">
+        <a href="/index.html">Psk. Dan. Dr.</a>
+        <a href="/index.html">Selin Ayas</a>
+       </div>
+
+       <div class="social-icons_header">
+        <a href="#" class="icon"><i class="fab fa-linkedin"></i></a>
+        <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+      </div>
+      
+      <nav class="navbar" id="navbar">
+        <ul class="navul" id="navul">
+          <li><a href="/index.html">Anasayfa </a></li>
+          <li><a href="/hakkinda.html">Hakkında </a></li>
+          <li><a href="/akademik.html">Akademik </a></li>
+          <li><a href="/blog.html">Blog </a></li>
+          <li><a href="/iletisim.html">İletişim </a></li>
+        </ul>
+        <ul class="navul-h" id="navul-h">
+         <li class="navclose"><a href="#"></a></li>
+         <li class="nav-li"><a href="/index.html">Anasayfa </a></li>
+         <li class="nav-li"><a href="/hakkinda.html">Hakkında </a></li>
+         <li class="nav-li"><a href="/akademik.html">Akademik </a></li>
+         <li class="nav-li"><a href="/blog.html">Blog </a></li>
+         <li class="nav-li"><a href="/iletisim.html">İletişim </a></li>
+        </ul>
+      </nav>
+    
+
+      <button class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </button>
+    
+  </header>
+
+ 
+
+
+<div class="blog_arkaplan_with_pagination" >
+
+
+
+<div class="container" id="blog-posts">
+  <!-- Blog posts will be dynamically added here -->
+</div>
+
+<div class="pagination" id="pagination">
+  <!-- Pagination links will be dynamically added here -->
+</div>
+
+<script>
+  // Sample blog post data (you can replace it with your actual blog posts)
+  const blogPosts = [
+      { id: 1, title: 'Mesleki Sosyal Medya Paylaşımları: Psikoloji Alanı Uzmanlarının Sınırları Ne Olmalı?', content: '"Sosyal medya platformlarının en yaygın kullanım alanları arasında çeşitli alanlarda uzman kişileri takip ederek bilgi edinmek de yer alıyor. Bu durum, birçok alan için ciddi sorunlar oluşturmasa da, ruh sağlığı alanı için aynı rahatlıkta..."', imageUrl:'../images/internet.jpg' },
+      { id: 2, title: '‘Selfie’ Paylaşımı: Narsisizm Belirtisi mi, Masum Bir Psikolojik İhtiyaç mı?', content: '"Türkçe’ye “öz-çekim” olarak çevrilmiş olsa da, halk arasında  “selfie” olarak kullanılan, kendi fotoğrafını çekip sosyal medyada paylaşma davranışı, son yıllarda araştırmacılar arasında oldukça ilgi çekiyor. Kimine..."', imageUrl:'../images/social_m.jpg' },
+      { id: 3, title: 'Modern İletişimin Temsil Ettikleri: “Son Görülme Tarihi” Bizim İçin Ne İfade Ediyor?', content: '"Çoğumuz, özellikle romantik ilişkilerde, WhatsApp uygulamasındaki son görülme tarihi kaynaklı sıkıntı yaşamış veya yaşandığına şahit olmuşuzdur. Mesaj iletildi, okundu, cevap yazılıyor, kişi ..."', imageUrl:'../images/social_m2.jpg' },
+      { id: 4, title: 'İnternet Nasıl Sosyalleştirdiğimizi Değiştirebilir Mi?', content: '"Teknoloji, internet ve sosyal medyanın hayatın her alanına girmesi, bilgiye erişim ve iletişim gibi konularda büyük kolaylık yaratmış olsa da hayatın pek çok alanında soru işaretleri de yaratıyor. Örneğin, teknolojinin sosyal hayatımıza verebileceği zarar, internet..."', imageUrl:'../images/social_m2.jpg' },
+      // Add more posts as needed
+  ];
+
+  const postsPerPage = 3; // Number of posts to display per page
+  let currentPage = 1; // Current page
+
+  // Function to display blog posts for the current page
+  function displayBlogPosts() {
+      const blogContainer = document.getElementById('blog-posts');
+      blogContainer.innerHTML = ''; // Clear previous content
+
+      const startIndex = (currentPage - 1) * postsPerPage;
+      const endIndex = startIndex + postsPerPage;
+      const currentPosts = blogPosts.slice(startIndex, endIndex);
+
+      currentPosts.forEach(post => {
+          const postElement = document.createElement('a');
+          postElement.classList.add('post');
+          postElement.href = `post${post.id}.html`;  // Link to individual post page
+
+          const imageElement = document.createElement('img');
+          imageElement.src = post.imageUrl;
+          imageElement.alt = post.title;
+
+          const contentWrapper = document.createElement('div');
+
+
+          const titleElement = document.createElement('h2');
+          titleElement.textContent = post.title;
+
+          const contentElement = document.createElement('p');
+          contentElement.textContent = post.content;
+
+          contentWrapper.appendChild(titleElement);
+          contentWrapper.appendChild(contentElement);
+
+
+          postElement.appendChild(imageElement);
+          postElement.appendChild(contentWrapper);
+          
+
+          blogContainer.appendChild(postElement);
+      });
+  }
+
+  // Function to generate pagination links
+  function generatePaginationLinks() {
+      const totalPages = Math.ceil(blogPosts.length / postsPerPage);
+      const paginationContainer = document.getElementById('pagination');
+      paginationContainer.innerHTML = '';
+
+      for (let i = 1; i <= totalPages; i++) {
+          const link = document.createElement('a');
+          link.href = `#page=${i}`;
+          link.textContent = i;
+          link.addEventListener('click', () => {
+              currentPage = i;
+              displayBlogPosts();
+              updatePaginationLinks();
+          });
+          paginationContainer.appendChild(link);
+      }
+  }
+
+  // Function to update pagination links based on current page
+  function updatePaginationLinks() {
+      const paginationLinks = document.querySelectorAll('.pagination a');
+      paginationLinks.forEach(link => {
+          if (parseInt(link.textContent) === currentPage) {
+              link.classList.add('disabled');
+          } else {
+              link.classList.remove('disabled');
+          }
+      });
+  }
+
+  // Initial function call to display blog posts and pagination links
+  displayBlogPosts();
+  generatePaginationLinks();
+</script>
+</div>
+
+
+
+<footer class="footer">
+  <nav class="navbar_end" id="navbar">
+    <ul class="navul_end" id="navul_end">
+      <li><a href="/index.html">Anasayfa </a></li>
+      <li><a href="/hakkinda.html">Hakkında </a></li>
+      <li><a href="akademik.html">Akademik </a></li>
+      <li><a href="/blog.html">Blog </a></li>
+      <li><a href="/iletisim.html">İletişim </a></li>
+    </ul>
+  </nav>
+  
+  <div class="social-icons">
+  
+    <a href="#" class="icon"><i class="fab fa-linkedin"></i></a>
+    <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+  </div>
+  
+  
+  <p class="ayas">© Ayas Web Design 2024</p>
+  
+  </footer>
+  
+  </body>
+  <script src="../scripts/script.js"></script>
+  </html>
+  
+  
+
+
+
+
+
+
+

@@ -1,0 +1,1036 @@
+
+
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    /*text-transform: capitalize;*/
+    transition: .1s;
+   
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+/* rgba(223, 176, 176, 0.39);*/
+:root{
+    --header-color: #2779a7);
+    --main-color: #49c5b6;
+    --main2-color:#ECD06F;
+    --main3-color:#2779a7;
+    --zemin-color:yellow;
+    --border:0.1rem solid rgba(255,255,255,0.4);
+    --yesil-color: rgb(196, 206, 172,.98);
+}
+
+body{ 
+    min-width: 30rem;
+    overflow: scroll;
+}
+
+
+/*--------------Header starts here-------------------------------*/
+.header {
+    /*backdrop-filter: blur(10px);*/
+    background-color: var(--main3-color);
+    align-items: center;
+    display: flex; 
+    justify-content: space-between;
+    height: 12.5rem;
+    box-shadow: 9px 9px 30px 0.5px rgba(110, 69, 69, 0.75);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.divhead{
+    display: flex;
+    justify-content: baseline;
+    flex-direction: column;
+    align-items: baseline;
+    font-size: 3rem;
+    font-weight: 400;
+    width: 25rem;
+    padding: 2rem;
+   
+}
+
+.divhead a{
+    font-family: "Dancing Script", cursive;
+    color: #000;
+}
+
+.navul{
+    padding-top: 3rem;
+    
+    list-style-type: none;
+    display: flex;
+    padding-right: 2rem;
+}
+
+.navul-h{
+    display: none;
+    list-style-type: none;
+}
+.navbar{
+    margin-right: 2rem;
+}
+
+.nav-li{
+    padding: 2rem;
+    display: flex;
+    width: 100%;
+}
+
+.navclose {
+    height: 12.5rem;
+    width: 100%;
+}
+
+.header .hamburger{
+    margin-top: 3rem;
+    display: none;
+    background-color:transparent;
+    border: 0;
+    color: #0e0e0e;
+    font-size: 2.5rem;
+    cursor: pointer;
+    z-index: 1200;
+}
+
+.navbar a{
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 2rem;
+    margin-right: 0;
+    font-size: 1.6rem;
+    color: var(--black-color);
+    border-bottom: 0.1rem solid transparent ;
+}
+
+.navul a:hover {
+    border-color: var(--main-color);
+    color: var(--main2-color);
+    padding-bottom: 0.5rem;
+    width: 10rem;
+}
+.hamburger:hover{
+    color: var(--main2-color);
+}
+
+.nav-li:hover {
+    background-color: rgb(196, 207, 214);
+}
+
+
+
+@media screen and (max-width:960px) 
+{
+    .navul{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    .navul-h.show{
+        backdrop-filter: blur(10px);
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        z-index: 999;
+        background-color: rgba(255, 255, 255, 0.98);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+  
+    .header {
+    display: flex; 
+    
+    }
+
+    .header .hamburger {
+        display:block;
+        position: fixed;
+       
+        right: 4rem;
+
+    }
+}
+
+/*--------------Header ends here-------------------------------*/
+
+/*--------------div1 starts here-------------------------------*/
+
+.div1 {
+    display: flex;
+    justify-content: center;
+    padding-top: 20rem;
+    padding-left: 6rem;
+    padding-right: 6rem; 
+    padding-bottom: 10rem;
+   /* background-image:url(/images/plain_bg.jpg);*/
+    margin: auto;
+    background-color: var(--main-color);
+    box-shadow: 9px 9px 30px 0.5px rgb(29, 1, 1);
+   }
+
+
+.profile_image {
+    height: 30rem;
+    width: 30rem;
+    border-radius: 50%;
+    margin-left: 0;
+    margin-right: 6rem;
+    box-shadow: 3px 3px 10px 0.5px rgba(138, 69, 69, 0.75);
+}
+
+.div1_header {  
+    max-width: 44rem;
+    text-align: justify;
+    font-size: 1.6rem;
+}
+
+
+.btn_dahafazla {
+    background-color: rgb(255, 255, 255);
+    border: 0.1rem solid black;
+    font-size: 1.4rem;
+    padding: 1.5rem;
+    border-radius: .5rem;
+    margin-top: 3rem;
+    color: rgb(0, 0, 0);
+    float: right;
+}
+
+.btn_dahafazla:hover {
+    background-color: rgb(43, 70, 88);
+    
+    border: 0.1rem solid rgb(255, 255, 255);
+}
+
+.btn_dahafazla a:hover{
+    color: white;
+}
+.btn_dahafazla:active{
+    background-color: rgb(43, 70, 88);
+    border: 0.1rem solid rgb(0, 0, 0);
+}
+
+@media screen and (max-width:960px) 
+{
+    .div1{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .div1_header {  
+        max-width: 90rem;
+    }
+
+    .profile_image{
+        padding: 0;
+        margin-bottom: 2rem;
+        margin-right: 0;
+    }
+}
+
+/*--------------div1 ends here-------------------------------*/
+
+/*--------------div2 starts here-----------------------------*/
+
+
+.div2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5rem 5rem;
+    background-color:var(--main2-color);
+    margin: auto;
+    align-items: center;
+    font-size: 1.6rem;
+}
+
+.div21_buyuk{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.div21{
+    width: 30rem;
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    font-size: 1.4rem;
+    padding: 0rem 3rem;
+    justify-content: center;
+    margin: 0 2rem;
+    border: 0.1rem solid transparent;
+    border-radius: .3rem;
+}
+
+.small_pic{
+    width: 28rem;
+    height: 21rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+}
+
+.div21:hover{
+    border: 0.1rem solid;
+    background-color: rgba(253, 253, 250, 0.2);
+    box-shadow: 1px 1px 10px 0.5px rgba(138, 69, 69, 0.5);
+}
+
+/*--------------div2 ends here-----------------------------*/
+
+
+
+/*---------------Blog card slider starts here------------*/
+
+
+/*Slider Section*/
+
+/*@import url("https://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css");
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800);*/
+
+
+.grid-section {
+  height: auto;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+ 
+}
+
+/* Blog Card */
+.blog-card {
+  width: 30rem;
+  height: 40rem;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 2rem 1rem;
+  cursor: pointer;
+  box-shadow: 10px 10px 10px 10px rgba(235, 14, 14, 0.2), 0 1px 2px rgba(0,0,0,0.24);
+  border: 0.1rem solid transparent;
+}
+
+
+
+.blog-card:hover {
+    border: 0.1rem solid;
+    box-shadow: 5px 5px 20px .5px rgba(0,0,0,0.6);
+}
+
+.blog-card__image {
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.blog-card__image img {
+   
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  
+}
+
+.blog-card__title {
+    width: auto;
+    align-items: center;
+    text-align: center;
+    margin-left: 0.2rem;
+    margin-right: .2rem;
+
+}
+
+.blog-card__title a{
+color: #000;
+text-decoration:none;
+font-size: 1.6rem;
+font-weight: 400;
+
+}
+
+.blog-card__title:visited {
+ color:#C0C0C0
+}
+
+.blog-card hr {
+    width: 75%;
+    border-top: 0.1px solid #ffce00;
+    margin-top: 10px;
+}
+
+
+
+
+<!-- slider style starts here 
+
+.mySlides {
+    display: none;
+
+}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+
+.slideshow-container {
+  max-width: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:center;
+  margin: auto;
+  background-color: var(--main-color);
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+
+/* Next & previous buttons */
+.prev, .next{
+    cursor: pointer;
+
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: grey;
+    font-weight: bold;
+    font-size: 1.4rem;
+    transition: 0.3s ease;
+    border-radius: 0 0 0 0;
+   
+  
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 0 0 0 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.1);
+}
+
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 360px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+/*---------------Blog card slider starts here------------*/
+/*---------------FAQ starts here-------------------------*/
+
+
+.faq-title {
+    font-size: 2rem;
+    margin: 0.4rem 0;
+}
+
+.faq-content{
+    margin-top:1rem;
+    font-size: 1.4rem;
+}
+
+div.seperator {
+    width: 30rem;
+    background-color: #e31b1b;
+    height: 0.2rem;
+    margin-left: -1.8rem;
+}
+
+.faq-list > div {
+    border-bottom: 0.07rem solid #ededed;
+    padding: 1.5rem 0rem;
+} 
+
+.faq-list > div:last-child {
+    border: unset;
+}
+
+details > summary {
+    list-style: none;
+}
+details > summary::-webkit-details-marker {
+    display: none;
+}
+
+summary {
+    font-size: 1.4rem;
+    
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    user-select: none;
+    transition: all 0.3s ease;
+}
+
+summary:hover {
+    color: #e31b1b;
+}
+
+details[open] summary ~ * {
+    animation: sweep .5s ease-in-out;
+}
+
+@keyframes sweep {
+    0%    {opacity: 0; margin-left: -10px}
+    100%  {opacity: 1; margin-left: 55px}
+}
+
+details[open] summary {
+    color: #e31b1b;
+}
+
+details[open] p {
+    border-left: 2px solid #e31b1b;
+    margin-left: 55px;
+    padding-left: 25px;
+    opacity: 100;
+    transition: all 1s ease;
+}
+
+details[open] summary:after {
+    content: "-";
+    font-size: 3.2rem;
+    margin: -33px 0.35em 0 0;
+    font-weight: 200;
+}
+
+.faq-main{
+    width: 100%;
+    background-color:var(--main2-color);
+    display: flex;
+    justify-content: center;
+}
+
+.faq-body {
+    max-width: 80rem;
+    align-self: center;
+    padding: 5em;
+   
+}
+
+.faq-header {
+    max-width: 80rem;
+}
+
+.faq-list {
+    max-width: 55em;
+    margin: 1em auto;
+    padding: 2em 0;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+
+summary:after {
+    background: transparent;
+    border-radius: 0.3em;
+    content: "+";
+    color: #e31b1b;
+    float: left;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: -0.3em 0.65em 0 0;
+    padding: 0;
+    text-align: center;
+    width: 25px;
+}
+
+/*---------------FAQ ends here-------------------------*/
+
+/*---------------İletisim starts here------------------*/
+
+
+.iletisim_sayfa_header{
+    text-transform: none;
+    color: #000;
+    padding-top: 14.5rem;
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*background-color: rgb(196, 206, 172,.98);*/
+    background-color: var(--main-color);
+    /*background-image:url(/images/plain_bg.jpg);*/
+
+}
+.text_iletisim{
+    padding-left: 3rem;
+    padding-right: 3rem;
+    color: #000;
+    text-transform: none;
+}
+
+
+.overfoot{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color:var(--main-color);
+    /*background-image:url(/images/plain_bg.jpg);*/
+    text-transform:none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+}
+
+.iletisim_header{
+    font-size: 1.4rem;
+    padding-bottom: 1rem;
+}
+
+
+
+
+#feedback-page{
+	text-align:center;
+}
+
+
+#form-div {
+	background-color:rgba(72,72,72,0.10);
+	
+	width: 60rem;
+    padding:3rem;
+ 
+}
+
+
+
+.feedback-input {
+	color:#3c3c3c;
+	font-family: Helvetica, Arial, sans-serif;
+    font-weight:500;
+	font-size: 1.4rem;
+	border-radius: 0;
+	line-height: 22px;
+	background-color: #fbfbfb;
+	padding: 13px 13px 13px 13px;
+	margin-bottom: 10px;
+	width:100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+  border: 3px solid rgba(0,0,0,0);
+  text-transform: none;
+}
+
+.feedback-input:focus{
+	background: #fff;
+	box-shadow: 0;
+	border: 3px solid #3498db;
+	color: #3498db;
+	outline: none;
+    padding: 13px 13px 13px 13px;
+    text-transform: none;
+}
+
+.focused{
+	color:#30aed6;
+	border:#30aed6 solid 3px;
+}
+
+/* Icons ---------------------------------- */
+#name{
+	background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
+	background-size: 3px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#name:focus{
+	background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
+	background-size: 30px 30px;
+	background-position: 8px 5px;
+  background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#email{
+	background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#email:focus{
+	background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
+	background-size: 30px 30px;
+  background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#comment{
+	background-image: url(http://rexkirby.com/kirbyandson/images/comment.svg);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    line-height: 150%;
+    resize:vertical;
+}
+
+input:hover, textarea:hover,
+input:focus, textarea:focus {
+	background-color:white;
+}
+
+#button-blue{
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+	float:left;
+	width: 100%;
+	border: #000000 solid 2px;
+	cursor:pointer;
+	background-color: rgba(163, 185, 158, 0.98);
+	color:rgb(0, 0, 0);
+	font-size:1.6rem;
+	padding-top: 2rem;
+	padding-bottom:2rem;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+    margin-top:-1px;
+    font-weight:700;
+    border-radius: 1rem;
+    
+}
+
+#button-blue:hover{
+	background-color: rgba(95, 83, 83, 0.4);
+	color: #ffffff;
+    border-radius: 1rem;
+}
+	
+.submit:hover {
+	color: #e21010;
+    
+}
+	
+.ease {
+	width: 0px;
+	height: 6rem;
+	background-color: #eb0d0d;
+	-webkit-transition: .2s ease;
+	-moz-transition: .2s ease;
+	-o-transition: .2s ease;
+	-ms-transition: .2s ease;
+	transition: .2s ease;
+    border-radius: 1rem;
+}
+
+.submit:hover .ease{
+  width:100%;
+  background-color: rgba(115, 119, 95, 0.98);
+  border-radius: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+	#form-div{
+		
+		width: 30rem;
+		
+		
+		
+	}
+}
+/**//**//**//**//**/
+
+
+/*---------------iletisim ends here-------------------------*/
+/*---------------footer starts here------------------------*/
+
+.footer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--main3-color);
+    margin: auto;
+    height: auto;
+    text-align: center;
+    padding: 2rem;
+}
+.footer .ayas{
+    color: black;
+}
+
+
+
+.navul_end{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style-type: none;
+   
+    font-size: 1.4rem;
+}
+.footer .navbar_end li{
+   padding-right: 1rem;
+   padding-left: 1rem;
+   padding-top: 2rem;
+  
+}
+
+.footer .navbar_end a{
+    color: black;
+}
+
+.footer .navbar_end a:hover{
+    color:var(--main2-color);
+}
+
+
+.social-icons_header {
+    right: 3rem;
+    top: 1rem;
+     position: fixed;
+     display: flex;
+     justify-content: center;
+ }
+ 
+ 
+ 
+ .social-icons {
+     display: flex;
+     justify-content: center;
+ }
+ 
+ .icon {
+     color: #000;
+     font-size: 2rem;
+     margin: 1rem 1rem;
+     transition: all 0.1s ease;
+ }
+ 
+ .icon:hover {
+    /* transform: scale(1.2);*/
+    /*transform: translateX(.2rem);*/
+    color: var(--main2-color);
+    
+ }
+
+
+
+/*---------------footer ends here------------------------*/
+
+/*---------------Blog page starts here-------------------------*/
+
+
+
+.container {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4rem 2rem;
+}
+.post {
+    background-color: #fff;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    box-shadow: 3px 3px 10px 0.5px rgba(138, 69, 69, 0.75);
+    
+   
+    font-size: 1.5rem;
+}
+.post:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 3px 3px 10px 0.5px rgba(138, 69, 69, 0.75);
+}
+.post h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: black;
+}
+.post p {
+    margin-top: 1rem;
+    color: #666;
+}
+.post img {
+    max-width: 30rem;
+    height: auto;
+    border-radius: 0.5rem;
+    margin-right: 1rem;
+    
+}
+.post-link {
+    text-decoration: none;
+    color: inherit;
+}
+.pagination {
+    margin-top: 2rem;
+    text-align: center;
+}
+.pagination a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease-in-out;
+}
+.pagination a:hover {
+    background-color: #0056b3;
+}
+.pagination .disabled {
+    background-color: #ddd;
+    color: #666;
+    pointer-events: none;
+}
+
+@media screen and (max-width: 600px) {
+    .post {
+        width: 100%;
+        flex-direction: column;
+    }
+    .post img {
+        margin-bottom: 1rem;
+        margin-right: 0rem;
+    }
+}
+
+/*---------------Blog page ends here-------------------------*/
+
+
+/*---------------Alt Sayfalar starts here-----------------------*/
+.blog_arkaplan_with_pagination{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    padding-top: 14.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem; 
+    /*background-color: rgb(196, 206, 172,.98); */
+    height: auto;
+    background-color:var(--main2-color);
+    /*background-image:url(/images/plain_bg.jpg);*/
+}
+.blog_arkaplan {
+    display: flex;
+    justify-content: center; 
+    padding-top: 14.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem; 
+    /*background-color: rgb(196, 206, 172,.98); */
+    height: auto;
+    background-color:var(--main2-color);
+    /*background-image:url(/images/plain_bg.jpg);*/
+}
+
+.blog_alan {
+    max-width: 90rem;
+    display:block;
+    text-align: left;
+    background-color: var(--main-color);
+    padding: 3rem;
+   /* border-radius: 2rem;*/
+    box-shadow: 3px 3px 10px 0.5px rgba(138, 69, 69, 0.75);
+    
+
+}
+.blog_baslik {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 2.5rem;
+}
+.pic1 {
+    width:35rem ;
+    padding-top: 1rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    float: left;
+}
+.pic2 {
+    width:35rem ;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+    float: right;
+}
+.blog_paragraf {
+    color: black; 
+    font-size: 1.6rem;
+    
+}
+.list {
+    font-size: 1.6rem;
+}
+
+.h3 {
+    font-size: 1.6rem;
+  }
+
+/*---------------Alt Sayfalar ends here-------------------------*/
