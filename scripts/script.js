@@ -1,5 +1,4 @@
 
-
 const hamburger=document.getElementById('hamburger');
 const navBAR=document.getElementById('navul-h');
 
@@ -7,6 +6,8 @@ const navBAR=document.getElementById('navul-h');
 hamburger.addEventListener('click', () => {
     navBAR.classList.toggle('show');
 });
+        
+
 
 
 var slideIndex = 1;
@@ -37,8 +38,15 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-const form = document.getElementById("form");
+
+
+
+  const form = document.getElementById("form");
 const result = document.getElementById("result");
+
+
+
+
 
 
 
