@@ -747,7 +747,7 @@ input:focus, textarea:focus {
 	width: 100%;
 	border: #000000 solid 2px;
 	cursor:pointer;
-	background-color: rgba(163, 185, 158, 0.98);
+	background-color: var(--main2-color);
 	color:rgb(0, 0, 0);
 	font-size:1.6rem;
 	padding-top: 2rem;
@@ -768,7 +768,7 @@ input:focus, textarea:focus {
 }
 	
 .submit:hover {
-	color: #e21010;
+	color: #b18686;
     
 }
 	
@@ -786,7 +786,7 @@ input:focus, textarea:focus {
 
 .submit:hover .ease{
   width:100%;
-  background-color: rgba(115, 119, 95, 0.98);
+  background-color: #706a5ba4;
   border-radius: 1rem;
 }
 
