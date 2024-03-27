@@ -71,7 +71,12 @@ body{
 }
 
 .divhead a{
-    font-family: "Dancing Script", cursive;
+  /*  font-family: "Dancing Script", cursive;*/
+  /*font-family: "Marck Script", cursive;*/
+  
+  /*  font-family: "Yesteryear", cursive;*/
+
+  font-family: "Caveat", cursive;
     color: #000;
 }
 
