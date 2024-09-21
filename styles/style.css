@@ -553,7 +553,7 @@ details[open] summary:after {
 
 .faq-main{
     width: 100%;
-    background-color:var(--main2-color);
+    background-color:var(--main-color);
     display: flex;
     justify-content: center;
 }
