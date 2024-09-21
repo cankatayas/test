@@ -624,7 +624,7 @@ summary:after {
 .overfoot{
     padding-top: 5rem;
     padding-bottom: 5rem;
-    background-color:var(--main-color);
+    background-color:var(--main2-color);
     /*background-image:url(/images/plain_bg.jpg);*/
     text-transform:none;
     display: flex;
