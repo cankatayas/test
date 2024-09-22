@@ -609,7 +609,7 @@ summary:after {
     align-items: center;
     justify-content: center;
     /*background-color: rgb(196, 206, 172,.98);*/
-    background-color: var(--main-color);
+    background-color: var(--main2-color);
     /*background-image:url(/images/plain_bg.jpg);*/
 
 }
